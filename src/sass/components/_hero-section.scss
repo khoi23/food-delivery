@@ -1,0 +1,28 @@
+.hero__content {
+  padding-top: 70px;
+
+  h5 {
+    font-size: 2.4rem;
+  }
+
+  &__title {
+    font-size: 4.6rem;
+    line-height: 55px;
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: #777;
+  }
+}
+
+.hero__btns {
+    @include flex(center, center);
+
+
+}

@@ -1,0 +1,140 @@
+.header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+  height: $header-height;
+  transition: height 0.3s ease;
+  padding: 10px 0;
+
+  &.shrink {
+    height: $header-shrink-height;
+    box-shadow: $box-shadow;
+    background-color: $main-bg;
+    z-index: 100;
+  }
+
+  @include tablet {
+    height: $header-tablet-height;
+    box-shadow: $box-shadow;
+    background-color: $main-bg;
+  }
+
+  @include mobile {
+    background-color: $main-bg;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .nav__wrapper {
+    @include flex(center, space-between);
+
+    &__logo {
+      @include flex(center, center);
+      inset: 0;
+      pointer-events: none;
+      gap: 10px;
+      object-fit: contain;
+
+      img {
+        height: 60px;
+      }
+
+      &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+    }
+
+    &__navigition {
+      &__menu {
+        @include flex(center, space-between);
+
+        flex-direction: row;
+        gap: 3rem;
+        font-size: 2.2rem;
+
+        .active__menu {
+          color: $main-color !important;
+          font-weight: 600;
+        }
+
+        .ri-close-fill {
+          display: none;
+          cursor: pointer;
+        }
+
+        @include tablet {
+          flex-direction: column;
+          background-color: $main-bg;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100vh;
+          width: 100%;
+          justify-content: flex-start;
+          padding-top: 60px;
+          transform: translateX(100%);
+          transition: transform 0.5s ease;
+          z-index: 100;
+
+          &.active {
+            transform: translateX(0);
+          }
+
+          .ri-close-fill {
+            display: block;
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+
+    &__right {
+      &__icon {
+        @include flex(center, space-between);
+        position: relative;
+
+        gap: 3rem;
+
+        i {
+          font-size: 2.4rem;
+          cursor: pointer;
+          &:hover {
+            color: $main-color;
+          }
+        }
+
+        &__cart {
+          position: relative;
+          &__badge {
+            position: absolute;
+            top: -5px;
+            left: 12px;
+            background: $main-color;
+            color: #fff;
+            padding-bottom: 1px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            font-weight: 400;
+            @include flex(center, center);
+          }
+        }
+
+        &__mobile__menu {
+          display: none;
+          @include tablet {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

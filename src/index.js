@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "./index.css";
+import "../src/sass/index.scss";
 import App from "./App";
 import "remixicon/fonts/remixicon.css";
 import "bootstrap/dist/css/bootstrap.min.css";
