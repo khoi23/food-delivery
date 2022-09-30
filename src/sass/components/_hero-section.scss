@@ -1,5 +1,5 @@
 .hero__content {
-  padding-top: 70px;
+  padding-top: 140px;
 
   h5 {
     font-size: 2.4rem;
@@ -22,7 +22,66 @@
 }
 
 .hero__btns {
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+
+  &__order {
     @include flex(center, center);
+    font-weight: 500;
+    border: none;
+    font-size: 2rem;
+    padding: 6px 16px;
+    gap: 8px;
+    background-color: $main-color;
 
+    a:hover {
+      color: $txt-white !important;
+    }
 
+    &:hover {
+      background-color: #ff3636 !important;
+    }
+  }
+
+  &__all {
+    @include flex(center, center);
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 6px 16px;
+    gap: 8px;
+    background-color: transparent;
+    border: 1px solid $main-color;
+    color: $main-color;
+
+    &:hover {
+      background-color: #ff3636 !important;
+      color: $txt-white !important;
+    }
+    a:hover {
+      color: $txt-white !important;
+    }
+  }
+}
+
+.hero__service {
+  margin-top: 40px;
+  @include flex(center, flex-start);
+  gap: 3rem;
+
+  &__item {
+    @include flex(center, center);
+    gap: 10px;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .shipping__icon {
+    @include flex(center, center);
+    height: 34px;
+    width: 34px;
+    background-color: $main-color;
+    border-radius: 50%;
+    color: $btn-main-color;
+  }
 }

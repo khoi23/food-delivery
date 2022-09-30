@@ -1,0 +1,53 @@
+.category__item {
+  @include flex(center, flex-start);
+  gap: 30px;
+  background-color: $prevention-color;
+  padding: 18px 24px;
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+  h6 {
+    font-size: 2.4rem;
+  }
+}
+
+.food__category {
+  background-color: $main-color;
+  margin-top: 30px;
+  padding: 10px 0;
+  font-size: 2rem;
+  border-radius: 8px;
+  @include flex(center, center);
+  gap: 30px;
+
+  button {
+    @include flex(center, center);
+    gap: 10px;
+    border: none;
+    outline: none;
+    padding: 7px 24px;
+    background-color: transparent;
+    color: $btn-main-color;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    
+    span {
+        margin-top: 5px;
+    }
+  }
+
+  .foodBtnActive {
+    background-color: $main-bg !important;
+    border-radius: 8px;
+    color: $main-color;
+    font-weight: 600 !important;
+  }
+}
